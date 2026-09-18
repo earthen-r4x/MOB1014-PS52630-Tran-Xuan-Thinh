@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class HinhChuNhat {
     public static void main(String[] args) {
+        final double PI = 3.14159;
         Scanner sc = new Scanner(System.in);
         int cd, cr, cv, dt;
         System.out.printf("Nhap chieu dai: ");
