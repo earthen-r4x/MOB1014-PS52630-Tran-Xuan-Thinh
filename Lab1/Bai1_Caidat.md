@@ -16,4 +16,4 @@ Nhấn vào nút Sign up
 
 Điền đầy đủ thông tin gồm Email, mật khẩu, tên người dùng, quốc gia, sau đó nhấn Continue
 
-Lúc này, app sẽ yêu cầu mã gồm 8 kí tự. Hãy mở Gmail để xem mã, sau đó nhấn Continue.
+Lúc này, app sẽ yêu cầu mã gồm 8 kí tự. Hãy mở Gmail để xem và nhập mã, sau đó nhấn Continue.
