@@ -8,7 +8,7 @@ package com.poly.lab1;
  *
  * @author tranx
  */
-public class HelloJava {
+public class Lab1 {
     public static void main(String[] args) {
         System.out.println("Ho ten: Tran Xuan Thinh\nMSSV: PS52630");
     }
