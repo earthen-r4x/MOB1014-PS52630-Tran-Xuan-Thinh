@@ -29,8 +29,8 @@ public class XuLyMang {
         }
         
         System.out.printf("Mang vua nhap: ");
-        for (int i = 0; i < n; i++) {
-            System.out.printf("%d ", a[i]);
+        for (int x : a) {
+            System.out.printf("%d ", x);
         }
         
         boolean soChan = false;

@@ -35,7 +35,7 @@ public class TimKiemSapXep {
         System.out.printf("Vi tri cua %d trong mang: ", x);
         for (int i = 0; i < a.length; i++) {
             if (a[i] == x) {
-                System.out.printf(i + " ");
+                System.out.printf("%d ", i);
                 timThay = true;
             }
         }
@@ -44,20 +44,20 @@ public class TimKiemSapXep {
             System.out.printf("Khong tim thay");
         }
         
+        int[] b = Arrays.copyOf(a, a.length);
         // sort giam dan
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[i] < a[j]) {
+        for (int i = 0; i < a.length -1; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
+                if (a[j] < a[j + 1]) {
                     int temp = a[j]; // temp = 7
-                    a[j] = a[i]; // 7 rpl 5
-                    a[i] = temp; // 5 rpl 7
+                    a[j] = a[j + 1]; // 7 rpl 5
+                    a[j + 1] = temp; // 5 rpl 7
                 }
             }
         }
         System.out.printf("\nMang giam dan (Bubble Sort): " + Arrays.toString(a));
         
-        int[] b = Arrays.copyOf(a, a.length);
         Arrays.sort(b);
-        System.out.printf("\nMang tang dan(Arrays.sort): " + Arrays.toString(b));
+        System.out.printf("\nMang tang dan (Arrays.sort): " + Arrays.toString(b));
     }
 }
