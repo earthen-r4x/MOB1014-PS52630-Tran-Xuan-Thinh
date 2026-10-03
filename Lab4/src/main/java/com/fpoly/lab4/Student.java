@@ -22,8 +22,8 @@ public class Student {
     public Student(String id, String name, int age, double gpa) {
         this.id = id;
         this.name = name;
-        this.age = age;
-        this.gpa = gpa;
+        this.setAge(age);
+        this.setGpa(gpa);
     }
     
     public String getID() {
