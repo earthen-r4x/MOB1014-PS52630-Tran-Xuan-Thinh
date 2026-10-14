@@ -55,7 +55,7 @@ public class TimKiemLaptop {
         System.out.printf("=== KET QUA TIM KIEM \"%s\" ===\n", keyword);
         keyword = keyword.toLowerCase();
         for (Laptop lp : list) {
-            if (lp.getName().toLowerCase().contains(keyword) || lp.getId().toLowerCase().contains(keyword)) {
+            if (lp.getName().toLowerCase().contains(keyword) || lp.getId().equalsIgnoreCase(keyword)) {
                 lp.output();
                 timKey = true;
             }
