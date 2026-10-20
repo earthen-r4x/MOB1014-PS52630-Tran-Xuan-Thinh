@@ -24,35 +24,41 @@ public class CapNhatLaptop {
         Scanner sc = new Scanner(System.in);
         String editID, editName;
         
-        do {
+        while (true) {
             System.out.printf("Nhap id can sua: ");
             editID = sc.nextLine();
             if (editID.isEmpty()) {
                 System.out.println("Vui long nhap id");
                 continue;
             }
-            boolean timID = false;
+            
+            Laptop timID = null;
             for (Laptop lp : list) {
                 if (lp.getId().equalsIgnoreCase(editID)) {
-                    System.out.print("Nhap ten san pham moi: ");
-                    editName = sc.nextLine().trim();
-                    if (editName.isEmpty()) {
-                        System.out.println("Ten san pham khong de trong");
-                        break;
-                    }
-                    lp.setName(editName);
-                    timID = true;
+                    timID = lp;
                     break;
                 }
             }
-            if (timID) {
+            
+            if (timID == null) {
+                System.out.println("Khong tim thay laptop co ID " + editID);
+            }
+            
+            while (true) {
+                System.out.print("Nhap ten san pham moi: ");
+                editName = sc.nextLine().trim();
+                if (editName.isEmpty()) {
+                    System.out.println("Ten san pham khong de trong");
+                    continue;
+                }
+                
+                timID.setName(editName);
                 System.out.println("Da cap nhat laptop " + editID);
                 break;
             }
-            else {
-                System.out.println("Khong tim thay laptop co ID " + editID);
-            }
-        } while (true);
+            
+            break;
+        }
         
         int delCount = 0;
         for (int i = list.size() - 1; i >= 0; i--) {
@@ -62,6 +68,7 @@ public class CapNhatLaptop {
             }
         }
         System.out.println("Da xoa " + delCount + " laptop het hang");
+        
         System.out.printf("=== DANH SACH SAU CAP NHAT (%d may) ===\n", list.size());
         for (Laptop lp : list) {
             lp.output();
