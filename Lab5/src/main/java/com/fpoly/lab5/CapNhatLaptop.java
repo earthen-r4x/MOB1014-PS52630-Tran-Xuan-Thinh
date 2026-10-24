@@ -42,6 +42,7 @@ public class CapNhatLaptop {
             
             if (timID == null) {
                 System.out.println("Khong tim thay laptop co ID " + editID);
+                continue;
             }
             
             while (true) {
